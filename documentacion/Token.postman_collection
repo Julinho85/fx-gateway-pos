@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "afd5b775-dc94-447b-b0b1-635f206e099b",
+		"name": "Token",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12385140",
+		"_collection_link": "https://orange-zodiac-432105.postman.co/workspace/BCP-MicroServicios~c7412f00-45e0-431d-b11f-b7692f509ba6/collection/12385140-afd5b775-dc94-447b-b0b1-635f206e099b?action=share&source=collection_link&creator=12385140"
+	},
+	"item": [
+		{
+			"name": "Request-SignTC",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsIm9yZy5hcGVyZW8uY2FzLnNlcnZpY2VzLlJlZ2lzdGVyZWRTZXJ2aWNlIjoiMTAwMDAyMTIiLCJraWQiOiJPQXV0aENsaWVudENyZWRlbnRpYWxDYXMifQ.eyJzdWIiOiI1ZTUzYWRlNy1kZDg3LTQ2MDMtYjFhNy1lZDI2OWMxY2FmYzgiLCJyb2xlcyI6W10sImlzcyI6IkNBU19BVVRIIiwiYXBwQ29kZSI6IlRaIiwidXNlckFwcCI6IkFQVFpERVMiLCJub25jZSI6IiIsImNsaWVudF9pZCI6IjVlNTNhZGU3LWRkODctNDYwMy1iMWE3LWVkMjY5YzFjYWZjOCIsImF1ZCI6IjVlNTNhZGU3LWRkODctNDYwMy1iMWE3LWVkMjY5YzFjYWZjOCIsImdyYW50X3R5cGUiOiJDTElFTlRfQ1JFREVOVElBTFMiLCJwZXJtaXNzaW9ucyI6W10sInNjb3BlIjoiYnMtZm9yZWlnbi1leGNoYW5nZS1vcmRlci12MyIsImNsYWltcyI6W10sInNjb3BlcyI6ImJzLWZvcmVpZ24tZXhjaGFuZ2Utb3JkZXItdjMiLCJzdGF0ZSI6IiIsImV4cCI6MTY5NjMzOTQ3NSwiaWF0IjoxNjk2MzM5MTc1LCJqdGkiOiJBVC0xNjQxNC1QRG9PamQtS0Jtd1FjcTIycHAwd29yZjJlbUdzeG15MCJ9.dIxd78lyN4XXmcnDi1Bl5mpCRXJrAMpvfHO5Cl-FeeepBgt6Qn3e4HN6Jqd24K8L1ZH9ueqCnWuI96Rp7qVKoiJzVsBNaV5xE9_L_fXH3JkdJacIeCoeqXSNCTOPzA4iZGyJmKxWKj3XilIZNbA47zamdgJDASKF0l-ZaiH1EBQM56ZeC93Kq9lW4vkYeZ_KouG-LYpoD-tI5QOpt0BZDzCfDpDdYOudeX5Xkmn8U6SzclZJSEMG_qSwpOScebphu0e2AzLd_oRPCBC3ozfr__RlDX8P_sUyoM7h57Zgrw2lZ24Gwdd6Z0KUR2M8foNbzM6YdX2sAiEUNCA8WDVXEg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-gateway-pos-key",
+						"value": "pk_test_dsfefefe3454545",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"jhernandezloya@gmail.com\",\r\n    \"card_number\":\"4964028592904269\",\r\n    \"cvv\":\"123\",\r\n    \"expiration_year\": \"2025\",\r\n    \"expiration_month\": \"09\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5002/api/tokens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request-SignTC -fail bad keyEcommerce",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsIm9yZy5hcGVyZW8uY2FzLnNlcnZpY2VzLlJlZ2lzdGVyZWRTZXJ2aWNlIjoiMTAwMDAyMTIiLCJraWQiOiJPQXV0aENsaWVudENyZWRlbnRpYWxDYXMifQ.eyJzdWIiOiI1ZTUzYWRlNy1kZDg3LTQ2MDMtYjFhNy1lZDI2OWMxY2FmYzgiLCJyb2xlcyI6W10sImlzcyI6IkNBU19BVVRIIiwiYXBwQ29kZSI6IlRaIiwidXNlckFwcCI6IkFQVFpERVMiLCJub25jZSI6IiIsImNsaWVudF9pZCI6IjVlNTNhZGU3LWRkODctNDYwMy1iMWE3LWVkMjY5YzFjYWZjOCIsImF1ZCI6IjVlNTNhZGU3LWRkODctNDYwMy1iMWE3LWVkMjY5YzFjYWZjOCIsImdyYW50X3R5cGUiOiJDTElFTlRfQ1JFREVOVElBTFMiLCJwZXJtaXNzaW9ucyI6W10sInNjb3BlIjoiYnMtZm9yZWlnbi1leGNoYW5nZS1vcmRlci12MyIsImNsYWltcyI6W10sInNjb3BlcyI6ImJzLWZvcmVpZ24tZXhjaGFuZ2Utb3JkZXItdjMiLCJzdGF0ZSI6IiIsImV4cCI6MTY5NjMzOTQ3NSwiaWF0IjoxNjk2MzM5MTc1LCJqdGkiOiJBVC0xNjQxNC1QRG9PamQtS0Jtd1FjcTIycHAwd29yZjJlbUdzeG15MCJ9.dIxd78lyN4XXmcnDi1Bl5mpCRXJrAMpvfHO5Cl-FeeepBgt6Qn3e4HN6Jqd24K8L1ZH9ueqCnWuI96Rp7qVKoiJzVsBNaV5xE9_L_fXH3JkdJacIeCoeqXSNCTOPzA4iZGyJmKxWKj3XilIZNbA47zamdgJDASKF0l-ZaiH1EBQM56ZeC93Kq9lW4vkYeZ_KouG-LYpoD-tI5QOpt0BZDzCfDpDdYOudeX5Xkmn8U6SzclZJSEMG_qSwpOScebphu0e2AzLd_oRPCBC3ozfr__RlDX8P_sUyoM7h57Zgrw2lZ24Gwdd6Z0KUR2M8foNbzM6YdX2sAiEUNCA8WDVXEg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-gateway-pos-key",
+						"value": "rs_test_dsfefefe3454545",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"jhernandezloya@gmail.com\",\r\n    \"card_number\":\"4964028592904269\",\r\n    \"cvv\":\"123\",\r\n    \"expiration_year\": \"2025\",\r\n    \"expiration_month\": \"09\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5002/api/tokens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request-getTC",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "R1KWFSALKVFM580J",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-gateway-pos-key",
+						"value": "pk_test_dsfefefe3454545",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5002/api/tokens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Request-getTC -fail expiration",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "V9EIUQE7C8SJ39G7",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-gateway-pos-key",
+						"value": "pk_test_dsfefefe3454545",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5002/api/tokens",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5002",
+					"path": [
+						"api",
+						"tokens"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

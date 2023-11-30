@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  fx-gateway-pos:
+    container_name: fx-gateway-pos
+    build:
+        context: ./
+        dockerfile: docker/dev.dockerfile
+    command: npm run dev
+    depends_on:
+      - mongo
+    volumes:
+      - ./src:/home/app/src
+      - ./nodemon.json:/home/app/nodemon.json
+    ports: 
+      - '8081:5000'
+
+  mongo:
+    container_name: fx-gateway-pos-mongo
+    image: mongo
+    command: mongod --port 27022
+    ports: ['27022:27022']
+    volumes:
+      - ./fx-gateway-pos:/data/db

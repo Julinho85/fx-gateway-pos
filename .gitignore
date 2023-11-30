@@ -1,0 +1,9 @@
+node_modules
+dist
+.env
+package-lock.json
+coverage
+logs
+data
+launch.json
+fx-gateway-pos
